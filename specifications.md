@@ -65,6 +65,7 @@ Note that external variables are still accessible inside the frame and modifying
 Using XML Entities like this:
 ```xml
 <!ENTITY library SYSTEM "http://example.org/xmlang/somelib.xml">
+<var label="library" immediate=1 constant=1>&library</var>
 ```
 
 ## Multithreading
