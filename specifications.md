@@ -1,4 +1,4 @@
-# XMLang 0.1 Specifications
+# XMLang 0.1.1 Specifications
 ## Core Principles
 Anything in the top-level of the program file is considered code and will be executed (unless it is a XML meta instruction or a comment).
 
