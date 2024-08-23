@@ -86,11 +86,11 @@ Here's an example:
 ### Executable Objects
 **NOTE: Executable Objects are a draft feature and contest with [variable injections](#variable-injections). One of these features may or may not be removed in future versions and either feature may be changed significantly in the final release.**
 
-A tag can be marked as executable by adding a `__execute__` child tag to it. For example:
+A tag can be marked as executable by adding a `:execute` child tag to it. For example:
 ```xml
 <custom-tag>
     <custom-data><text>Sample Text!</text></custom-data>
-    <__execute__>
+    <:execute>
         <slice-text>
             <get-tag type="custom-data">
                 <reference label="$this"/>
@@ -98,7 +98,7 @@ A tag can be marked as executable by adding a `__execute__` child tag to it. For
             <!-- Start --><number>0</number>
             <!-- End --><number>6</number>
         </slice-text>
-    </__execute__>
+    </:execute>
 </custom-tag>
 ```
 
