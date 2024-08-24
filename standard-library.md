@@ -24,14 +24,20 @@ Standard Library specifies one unary operation: The `not` operation. It expects 
 
 _Note: `not` is a binary operation and thus only works on whole numbers. As such all non-whole numbers will be rounded to the closest integer._
 
+## Working with Branches
+The centrepiece of branching is the `condition` tag. It serves as a container for one or multiple children tags. The executable block inside should evaluate to a number tag (ideally one behaving like a boolean). A condition is assumed fulfilled when the number value is non-zero.
 
-## Comparison Operations
-Comparison operations
+### Comparison Operations
+**TBD**
 - `equal`
 - `less-than`
 - `greater-than`
 - `less-than-or-equal`
 - `greater-than-or-equal`
 
-## Branching
+### Branching
 The `branch` tag indicates a... branching operation. It expects its first child to be a `condition` tag followed by a `:execute` tag. An optional child tag `else` is also accepted.
+
+
+## Looping
+The `while` tag allows running a `:execute` tag as long as a `condition` is met.
