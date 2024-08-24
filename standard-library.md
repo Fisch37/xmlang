@@ -23,3 +23,15 @@ _Note: `and`, `or`, and `xor` only work on whole numbers. For that reason they w
 Standard Library specifies one unary operation: The `not` operation. It expects one child that evaluates to a number tag and itself evaluates to a number tag.
 
 _Note: `not` is a binary operation and thus only works on whole numbers. As such all non-whole numbers will be rounded to the closest integer._
+
+
+## Comparison Operations
+Comparison operations
+- `equal`
+- `less-than`
+- `greater-than`
+- `less-than-or-equal`
+- `greater-than-or-equal`
+
+## Branching
+The `branch` tag indicates a... branching operation. It expects its first child to be a `condition` tag followed by a `:execute` tag. An optional child tag `else` is also accepted.
