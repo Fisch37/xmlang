@@ -56,36 +56,10 @@ Note that external variables are still accessible inside the frame and modifying
 
 `frame` tags can be used at any point in the program. They are not required to be inside a variable.
 
-### Variable Injections
-**NOTE: Variable Injections are a draft feature. The virtual implementation of `add` for example would not match this feature at all. Another idea is elaborated on in [Executable Objects](#executable-objects)**
-
-Non-immediate `reference` tags may contain `inject` tags to temporarily inject variables into the referenced variable's execution frame.
-
-Here's an example:
-```xml
-<var label="function">
-    <!-- Note: Current idea is to return the result of the 
-    last operation -->
-    <add>
-        <reference label="a"/>
-        <reference label="b"/>
-    </add>
-</var>
-
-<reference label="function">
-    <inject label="a"><number>420</number></inject>
-    <inject label="b">
-        <reference label="some-other-variable">
-    </inject>
-</reference>
-```
-
 ## Templates
 **TBD**
 
 ### Executable Objects
-**NOTE: Executable Objects are a draft feature and contest with [variable injections](#variable-injections). One of these features may or may not be removed in future versions and either feature may be changed significantly in the final release.**
-
 A tag can be marked as executable by adding a `:execute` child tag to it. For example:
 ```xml
 <custom-tag>
