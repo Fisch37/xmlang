@@ -59,7 +59,7 @@ Note that external variables are still accessible inside the frame and modifying
 ## Templates
 **TBD**
 
-### Executable Objects
+## Executable Objects
 A tag can be marked as executable by adding a `:execute` child tag to it. For example:
 ```xml
 <custom-tag>
@@ -75,6 +75,11 @@ A tag can be marked as executable by adding a `:execute` child tag to it. For ex
     </:execute>
 </custom-tag>
 ```
+
+### Boxing
+The `boxed` tag accepts a single child tag and evaluates to that tag. It also instructs the interpreter to treat its value as non-executable for that evaluation chain.
+
+This allows for executable objects to evaluate to executable objects themselves. Without `boxed`, the interpreter would evaluate the intended result leading instead.
 
 ## Libraries & External code
 **TBD**
