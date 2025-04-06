@@ -12,7 +12,16 @@ Custom evaluation of objects can still be specified using an `<@execute>`¹ chil
 ¹ _Note: I would prefer to use @ for all metatags, if at all possible. Current specification uses :, but this will hopefully change._
 
 ## Referencing
-Referencing another object in the DOM will now be done using XPath. A reference object will evaluate to the object pointed to by the XPath located in its `target` attribute.
+Referencing another object in the DOM will now be done using XPath. A reference object will evaluate to the object pointed to by the XPath located in its `target` attribute. 
+The resulting object will be a deep copy of the referenced object. That means any changes made to a reference will not be applied to the original object. To modify objects at another location, a type of set tag should be used.
+
+If the XPath cannot find a tag at that position, it will return an error object of the following type:
+```xml
+<error type="failed-reference" target="[the XPath that caused this error]" />
+```
+Note that a reference may also evaluate to an error successfully, if the XPath points to such an object.
+
 _ToDo: Can XPath find multiple objects?_
 
-### Error handling 
+## Error handling
+When an evaluation cannot succeed in its normal operation, it should instead evaluate to an `<error>` object. This object may have any data you wish and can be used just as a normal object.
