@@ -27,7 +27,5 @@ If the XPath would apply for multiple objects, the reference will return an erro
 
 Note that a reference may also evaluate to an error successfully, if the XPath points to such an object.
 
-_ToDo: Can XPath find multiple objects?_
-
 ## Error handling
 When an evaluation cannot succeed in its normal operation, it should instead evaluate to an `<error>` object. This object may have any data you wish and can be used just as a normal object.
